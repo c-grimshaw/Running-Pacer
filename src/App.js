@@ -1,5 +1,5 @@
 import PaceApp from "./Components/PaceApp.js";
-import "./Style/App.css";
+import "./Style/index.css";
 
 function App() {
   return (
