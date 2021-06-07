@@ -6,10 +6,11 @@ import axios from "axios";
 function PaceApp() {
   const [paceInfo, setPaceInfo] = useState({
     distance: 0,
+    distanceUnits: "km",
     hours: 0,
     minutes: 0,
     seconds: 0,
-    units: "km",
+    paceUnits: "km",
   });
 
   /*

@@ -12,8 +12,16 @@ const PaceForm = ({ pace, onPaceInfoChange }) => {
               distance: d.target.value ? d.target.value : 0,
             })
           }
-        />{" "}
-        kilometers
+        />
+        <select
+          defaultValue="km"
+          onChange={(e) =>
+            onPaceInfoChange({ ...pace, distanceUnits: e.target.value })
+          }
+        >
+          <option value="km">km</option>
+          <option value="mi">mi</option>
+        </select>
       </div>
       <label>Enter pace:</label>
       <input
@@ -46,7 +54,9 @@ const PaceForm = ({ pace, onPaceInfoChange }) => {
       <div>
         <select
           defaultValue="km"
-          onChange={(e) => onPaceInfoChange({ ...pace, units: e.target.value })}
+          onChange={(e) =>
+            onPaceInfoChange({ ...pace, paceUnits: e.target.value })
+          }
         >
           <option value="km">min/km</option>
           <option value="mi">min/mi</option>
