@@ -12,11 +12,11 @@ function PaceResults({ pace }) {
   ];
   const minutes = time / distance;
   const seconds = parseInt((minutes - Math.trunc(minutes)) * 60);
-  const minPerString = `${Math.floor(minutes)}:${
+  const minutesPerUnit = `${Math.floor(minutes)}:${
     seconds < 10 ? "0" + seconds : seconds
   } min/${units}`;
 
-  return <div>{distance && time ? minPerString : ""}</div>;
+  return <div>{distance && time ? minutesPerUnit : ""}</div>;
 }
 
 export default PaceResults;
