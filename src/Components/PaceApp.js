@@ -38,7 +38,7 @@ function PaceApp() {
 
   console.log(paceInfo);
   return (
-    <div className="max-w-md mx-auto shadow-md p-6 rounded-md mt-5">
+    <div className="max-w-sm mx-auto shadow-md p-6 rounded-md mt-5">
       <PaceForm pace={paceInfo} onPaceInfoChange={setPaceInfo} />
       <PaceResults pace={paceInfo} />
     </div>
