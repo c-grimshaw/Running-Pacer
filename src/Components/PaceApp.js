@@ -13,6 +13,10 @@ function PaceApp() {
     paceUnits: "km",
   });
 
+  const [equivs, setEquivs] = useState({});
+  const handleClick = (e) => {
+    setEquivs();
+  };
   /*
   var params = {
     distance: distance,
@@ -35,10 +39,14 @@ function PaceApp() {
       .then((response) => setPaceInfo(response.data));
   };
   */
-
-  console.log(paceInfo);
   return (
-    <div className="max-w-sm mx-auto shadow-md p-6 rounded-md mt-5">
+    <div className="bg-green-50 w-max shadow-md p-6 rounded-lg mt-5 ml-10">
+      <div className="flex justify-center text-2xl font-bold items-center font-sans">
+        Pace Calculator
+        <span className="bg-white rounded-full ml-4 text-xs h-14 w-14 flex items-center justify-center border">
+          VDOT
+        </span>
+      </div>
       <PaceForm pace={paceInfo} onPaceInfoChange={setPaceInfo} />
       <PaceResults pace={paceInfo} />
     </div>

@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 const PaceForm = ({ pace, onPaceInfoChange }) => {
+  const inputRef = useRef(null);
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <form className="m-1 flex flex-col items-center">
       <div>
@@ -8,6 +13,7 @@ const PaceForm = ({ pace, onPaceInfoChange }) => {
       </div>
       <div>
         <input
+          ref={inputRef}
           className="w-25 ml-1 p-1 border"
           placeholder="0"
           onChange={(d) =>
